@@ -1,0 +1,8 @@
+<% if @post.errors.any? %>
+<h3>There are some error that prohibited you to create a post</h3>
+<ul>
+ <% @post.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
