@@ -66,3 +66,5 @@ end
 
 gem "pg", group: "production"
 gem "hirb"
+
+gem "annotate", "~> 3.2"
