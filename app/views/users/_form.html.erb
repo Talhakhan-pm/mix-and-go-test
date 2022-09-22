@@ -1,0 +1,21 @@
+<%= render 'layouts/messages', obj: @user %>
+
+<%= form_with(model: @user) do |f| %>
+  <p>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "Enter a unique Username" %>
+  </p>
+  <p>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "Enter your Email" %>
+  </p>
+    <p>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Enter your Password" %>
+  </p>
+
+  <p>
+    <%= f.submit "Signup" %>
+  </p>
+  
+<% end %>

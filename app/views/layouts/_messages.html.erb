@@ -1,7 +1,7 @@
-<% if @post.errors.any? %>
-<h3>There are some error that prohibited you to create a post</h3>
+<% if obj.errors.any? %>
+<h3>There are some error that prohibited <%= obj.class.name.downcase %> to create a post</h3>
 <ul>
- <% @post.errors.full_messages.each do |msg| %>
+ <% obj.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
 <% end %>
 </ul>
