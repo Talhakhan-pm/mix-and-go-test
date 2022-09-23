@@ -1,5 +1,7 @@
 <h1>Post Lisitng Page</h1>
 
+
+
 <table>
   <thead>
     <tr>
@@ -22,5 +24,11 @@
 </table>
 
 <%= link_to "New Post", new_post_path %>
-
-<%= link_to "Signup", signup_path %>
+<% if logged_in? %>
+  <%= link_to "Signup", signup_path %>
+  <%= link_to "Logout ", logout_path, data: {"turbo-method": :delete} %>
+    <% else %>
+  <%= link_to "login", login_path %>
+  
+<% end %>
+  
