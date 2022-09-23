@@ -1,0 +1,16 @@
+<h1>Login Portal</h1>
+
+<%= form_with(scope: :session, url: login_path) do |f| %>
+  <p>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "Enter your Email" %>
+  </p>
+    <p>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Enter your Password" %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
